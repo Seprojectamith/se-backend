@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 mongoose.set('strictQuery', true);
-mongoose.connect(process.env.mongodb_url, {
+mongoose.connect("mongodb+srv://seproject65:1234567890@cluster0.kn2b4wz.mongodb.net/?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
