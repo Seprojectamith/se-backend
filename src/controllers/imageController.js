@@ -9,6 +9,9 @@ const imageUpload = async(req,res,next)=>{
         }
         return res.status(200).json({links})
     }catch(error){
+        if(error.statusCode ===403){
+            return res.status(403).json({"message":"Acsess Denied By AWS"})
+        }
         return res.status(500).json({"message":"Something Went Wrong"});
     }
 } 
@@ -21,7 +24,9 @@ const fetchUserImages = async (req,res,next)=>{
         console.log(response)
         return res.status(200).json({imageData:response});
     }catch(error){
-        console.log(error)
+        if(error.statusCode ===403){
+            return res.status(403).json({"message":"Acsess Denied By AWS"})
+        }
         return res.status(500).json({"message":"Something Went Wrong"});
     }
 }
