@@ -8,7 +8,7 @@ const app=express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 const cors=require("cors");
-const allowedDomains=["http://localhost:3000","http://localhost:3002","http://localhost:3003"]
+const allowedDomains=["http://localhost:3000","http://localhost:3002","http://localhost:3003","http://se-project-frontend.s3-website-us-west-2.amazonaws.com"]
 // app.use(cors());
 app.use(cors({  
     credentials:true,
