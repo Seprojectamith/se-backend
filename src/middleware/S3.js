@@ -22,7 +22,7 @@ function uploadFile(bucketName,file,folderPath=""){
     }
     catch(e){
         console.log(e.message)
-        return e;
+        throw e;
     }
 }
 
@@ -43,7 +43,7 @@ async function fetchUserImages(bucketName,userId){
         return urls;
     }catch(error){
         console.log(error)
-        return error;
+        throw error;
     }
 }
 
